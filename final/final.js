@@ -78,6 +78,7 @@ const create = () => {
   let gender2 = document.getElementById("gender2").checked;
 
   let isClear = true;
+
   // 이메일과 이름 에러 메시지
   if (email === "") {
     document.getElementById("emailError").innerText = "이메일을 입력해 주세요.";
