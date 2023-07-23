@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>회원가입</title>
+    <script src="./final.js"></script>
+    <link href="./final.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__header">코드캠프 회원가입</div>
+      <div class="wrapper__body">
+        <input
+          type="text"
+          class="body__input"
+          id="email"
+          placeholder="이메일을 입력해 주세요."
+        />
+        <div class="noError" id="emailError"></div>
+        <input
+          type="text"
+          class="body__input"
+          id="name"
+          placeholder="이름을 입력해 주세요."
+        />
+        <div class="noError" id="nameError"></div>
+        <input
+          type="password"
+          class="body__input"
+          id="password1"
+          placeholder="비밀번호를 입력해 주세요."
+        />
+        <div class="noError" id="passwordError1"></div>
+        <input
+          type="password"
+          class="body__input"
+          id="password2"
+          placeholder="비밀번호를 다시 입력해 주세요."
+        />
+        <div class="noError" id="passwordError2"></div>
+        <div class="body__phone">
+          <input
+            type="text"
+            class="phoneNum"
+            id="num1"
+            oninput="changeFocus1()"
+            onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"
+            maxlength="3"
+          />
+          -
+          <input
+            type="text"
+            class="phoneNum"
+            id="num2"
+            oninput="changeFocus2()"
+            onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"
+            maxlength="4"
+          />
+          -
+          <input
+            type="text"
+            class="phoneNum"
+            id="num3"
+            oninput="changeFocus3()"
+            onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');"
+            maxlength="4"
+          />
+        </div>
+        <div class="body__register">
+          <div class="number" id="randomNum">000000</div>
+          <button class="noSend" id="sendTo" onclick="sendTo()" disabled>
+            인증번호 전송
+          </button>
+        </div>
+        <div class="body__register">
+          <div class="number" id="timer">3:00</div>
+          <button class="noFinish" id="finish" onclick="finish()" disabled>
+            인증 완료
+          </button>
+        </div>
+        <select class="body__select" id="local">
+          <option value="0" disabled selected>지역을 선택하세요</option>
+          <option value="1">서울</option>
+          <option value="2">경기</option>
+          <option value="3">인천</option>
+        </select>
+        <div class="noError" id="localError"></div>
+        <div class="body__radio">
+          <label class="woman"
+            ><input type="radio" id="gender1" name="gender" />여성</label
+          >
+          <label class="man"
+            ><input type="radio" id="gender2" name="gender" />남성</label
+          >
+        </div>
+        <div class="noError" id="genderError"></div>
+        <div class="divideLine"></div>
+      </div>
+      <div class="wrapper__footer">
+        <button class="submit" type="submit" id="create" onclick="create()">
+          가입하기
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
