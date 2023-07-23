@@ -151,7 +151,7 @@ const create = () => {
     document.getElementById("genderError").className = "noError";
   }
 
-  //   가입하기
+  //   가입하기 event
   if (isClear && isTrue) {
     document.getElementsByClassName("error").value = "";
     document.getElementsByClassName("error").className = "noError";
